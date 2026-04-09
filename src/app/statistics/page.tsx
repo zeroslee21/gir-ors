@@ -37,17 +37,17 @@ const COLORS = {
   purple: "#7c3aed",
 };
 
-// CDM vs 국내 분포 데이터
+// CDM vs 국내 분포 데이터 (실제 크롤링 기반: 2026년 4월)
 const cdmDomesticData = [
-  { name: "CDM 방법론", value: 211 },
-  { name: "국내 방법론", value: 103 },
+  { name: "CDM 방법론", value: summaryStats.cdmCount },
+  { name: "국내 방법론", value: summaryStats.domesticCount },
 ];
 
-// CDM 분류별 데이터
+// CDM 분류별 데이터 (AM:87, ACM:25, AMS-I:13, AMS-II:19, AMS-III:63, AR-AMS:2)
 const cdmCategoryData = [
-  { name: "AM (대규모)", value: 95 },
-  { name: "ACM (통합)", value: 25 },
-  { name: "AMS (소규모)", value: 91 },
+  { name: "AM (대규모)", value: summaryStats.amCount },
+  { name: "ACM (통합)", value: summaryStats.acmCount },
+  { name: "AMS (소규모)", value: summaryStats.amsCount },
 ];
 
 // 사업분야별 방법론 수 데이터 (추정치)
@@ -185,7 +185,7 @@ export default function StatisticsPage() {
         <div className="rounded-xl border border-border bg-card p-6">
           <h2 className="mb-4 text-lg font-semibold">CDM vs 국내 분포</h2>
           <p className="mb-4 text-sm text-muted-foreground">
-            전체 314건 방법론의 CDM / 국내 구분 비율
+            전체 322건 방법론의 CDM / 국내 구분 비율
           </p>
           <ResponsiveContainer width="100%" height={280}>
             <PieChart>
@@ -218,7 +218,7 @@ export default function StatisticsPage() {
         <div className="rounded-xl border border-border bg-card p-6">
           <h2 className="mb-4 text-lg font-semibold">CDM 분류별 분포</h2>
           <p className="mb-4 text-sm text-muted-foreground">
-            CDM 211건을 AM / ACM / AMS 유형별로 구분
+            CDM 209건을 AM / ACM / AMS 유형별로 구분 (AM:87, ACM:25, AMS:95, AR-AMS:2)
           </p>
           <ResponsiveContainer width="100%" height={280}>
             <PieChart>
@@ -278,7 +278,7 @@ export default function StatisticsPage() {
         <div className="rounded-xl border border-border bg-card p-6 lg:col-span-2">
           <h2 className="mb-4 text-lg font-semibold">연도별 방법론 증가 추이</h2>
           <p className="mb-4 text-sm text-muted-foreground">
-            2015-2024년 CDM(고정) 및 국내 방법론 누적 증가 현황
+            2015-2026년 CDM 및 국내 방법론 누적 증가 현황 (실제 등록일 기준)
           </p>
           <ResponsiveContainer width="100%" height={320}>
             <LineChart
@@ -287,7 +287,7 @@ export default function StatisticsPage() {
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="year" tick={{ fontSize: 12 }} />
-              <YAxis tick={{ fontSize: 12 }} domain={[0, 250]} />
+              <YAxis tick={{ fontSize: 12 }} domain={[0, 350]} />
               <Tooltip content={<CustomTooltip />} />
               <Legend />
               <Line

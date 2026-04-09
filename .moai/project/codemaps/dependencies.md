@@ -257,11 +257,13 @@ clsx
 | Next.js | ~60KB | 높음 | Dynamic import |
 | Tailwind CSS | ~15KB | 중간 | Purge unused CSS |
 | Recharts | ~80KB | 높음 | Lazy load charts |
-| Fuse.js | ~8KB | 낮음 | Always included |
+| Fuse.js | ~12KB | 중간 | 533개 데이터셋 인덱싱 최적화 |
 | lucide-react | ~10KB | 중간 | Tree shaking |
 | date-fns | ~12KB | 중간 | Modular import |
 | next-themes | ~2KB | 낮음 | Always included |
 | clsx | ~1KB | 낮음 | Always included |
+
+참고: Fuse.js 크기는 데이터셋 크기 증가 (314 → 533개)로 약간 증가했습니다.
 
 ### 최적화 방안
 

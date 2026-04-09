@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: "%s | ORS 탐색기",
   },
   description:
-    "한국 온실가스종합정보센터(GIR) 상쇄등록부시스템(ORS)에 등록된 314건의 감축방법론을 탐색하고 분석할 수 있는 플랫폼입니다.",
+    "한국 온실가스종합정보센터(GIR) 상쇄등록부시스템(ORS)에 등록된 322건의 감축방법론을 탐색하고 분석할 수 있는 플랫폼입니다.",
   keywords: [
     "배출권거래제",
     "감축방법론",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ORS 탐색기 - 한국 상쇄등록부 감축방법론",
     description:
-      "314건의 감축방법론을 탐색하고 분석할 수 있는 플랫폼",
+      "322건의 감축방법론을 탐색하고 분석할 수 있는 플랫폼",
     type: "website",
     locale: "ko_KR",
   },

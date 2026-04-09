@@ -29,17 +29,17 @@ export default function AgenciesPage() {
           <div>
             <h2 className="font-semibold">국내 자체 개발 방법론 관리 체계</h2>
             <p className="mt-1 text-sm text-muted-foreground">
-              국내 자체 개발 방법론 약 103건을 5개 부처가 분담 관리합니다.
+              국내 자체 개발 방법론 113건을 5개 부처가 분담 관리합니다.
               각 부처는 소관 분야의 방법론 개발, 승인 및 유지관리를 담당합니다.
             </p>
             <div className="mt-3 flex flex-wrap gap-3">
               <div className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm">
                 <span className="text-muted-foreground">국내 방법론: </span>
-                <span className="font-semibold text-primary">103건</span>
+                <span className="font-semibold text-primary">113건</span>
               </div>
               <div className="rounded-lg border border-border bg-card px-3 py-1.5 text-sm">
                 <span className="text-muted-foreground">CDM 방법론: </span>
-                <span className="font-semibold text-blue-600">211건</span>
+                <span className="font-semibold text-blue-600">209건</span>
                 <span className="ml-1 text-xs text-muted-foreground">(UNFCCC 직접 승인)</span>
               </div>
             </div>
@@ -53,7 +53,7 @@ export default function AgenciesPage() {
           <Globe className="mt-0.5 h-5 w-5 shrink-0 text-blue-600" />
           <div>
             <h3 className="font-medium text-blue-900 dark:text-blue-100">
-              CDM 방법론: 211건 (UNFCCC 직접 승인)
+              CDM 방법론: 209건 (UNFCCC 직접 승인)
             </h3>
             <p className="mt-1 text-sm text-blue-700 dark:text-blue-300">
               CDM 방법론은 UNFCCC(유엔기후변화협약) 산하 CDM 집행위원회(EB)에서

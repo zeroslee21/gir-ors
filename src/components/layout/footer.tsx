@@ -44,7 +44,7 @@ export function Footer() {
               <span className="text-lg font-bold">ORS 탐색기</span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-              한국 온실가스종합정보센터(GIR) 상쇄등록부시스템에 등록된 314건의
+              한국 온실가스종합정보센터(GIR) 상쇄등록부시스템에 등록된 322건의
               감축방법론을 탐색하고 분석할 수 있는 플랫폼입니다.
             </p>
             <p className="mt-2 text-xs text-muted-foreground/70">

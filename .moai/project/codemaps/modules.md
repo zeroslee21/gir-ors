@@ -8,11 +8,21 @@ GIR ORS는 기능별로 다음 모듈로 구성됩니다:
 src/
 ├── app/              # 페이지 (Next.js App Router)
 ├── components/       # 재사용 가능한 컴포넌트
-├── data/            # 정적 JSON 데이터
+├── data/            # 정적 JSON 데이터 (5,460줄)
 ├── hooks/           # 커스텀 React 훅
 ├── lib/             # 유틸리티 함수
 ├── types/           # TypeScript 타입 정의
-└── utils/           # 헬퍼 함수
+├── utils/           # 헬퍼 함수
+└── scripts/         # 빌드 스크립트 및 크롤러
+
+data/
+├── methodologies.ts  # 533개 방법론 (5,460줄, 정제된 ORS 데이터)
+├── sectoral-scopes.json
+├── governing-bodies.json
+└── statistics.json
+
+scripts/
+└── crawl-ors.mjs     # ORS 데이터 크롤링 스크립트
 ```
 
 ## 모듈별 상세 설명
@@ -142,16 +152,19 @@ Recharts 기반 시각화 컴포넌트입니다.
 
 ### 3. data/ - 데이터 모듈 (4개)
 
-정적 JSON 데이터 파일들입니다. 빌드 타임에 읽혀 페이지에 포함됩니다.
+정적 JSON 데이터 파일들입니다. 빌드 타임에 읽혀 페이지에 포함됩니다. methodologies.ts는 실제 크롤링된 ORS 데이터를 포함합니다.
 
-#### methodologies.json
-- **크기**: ~500KB
-- **내용**: 314개 방법론의 전체 정보
+#### methodologies.ts
+- **크기**: 5,460줄 (TypeScript)
+- **내용**: 533개 방법론의 전체 정보 (211개 CDM + 322개 국내)
+- **데이터 출처**: 실제 ORS 데이터 크롤링 결과 (crawl-ors.mjs)
 - **필드**: 
   - id, slug, name, description
   - sectorId, governingBodyId
-  - year, status
+  - year, status, revisionsCount
   - createdAt, updatedAt
+  - methodologyType (cdm 또는 domestic)
+- **국내 방법론 정부기관별**: MOTIE 200건, MOLIT 52건, MOE 47건, MAFRA 16건, MOF 7건
 
 #### sectoral-scopes.json
 - **크기**: ~50KB
@@ -309,7 +322,8 @@ data/ → 컴포넌트/페이지 (import)
 | components/common | 공통 기능 | 2 컴포넌트 |
 | components/charts | 데이터 시각화 | 9 컴포넌트 |
 | components/methodology | 도메인 특화 | 1 컴포넌트 |
-| data/ | 정적 데이터 | 4 JSON 파일 |
+| data/ | 정적 데이터 | 4 파일 (methodologies.ts는 5,460줄) |
+| scripts/ | 빌드 스크립트 및 크롤러 | crawl-ors.mjs (ORS 데이터 크롤링) |
 | hooks/ | 상태 관리 | 2 훅 |
 | lib/ | 유틸리티 함수 | 2 파일 |
 | types/ | 타입 정의 | 4 파일 |

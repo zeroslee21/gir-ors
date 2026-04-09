@@ -81,9 +81,9 @@ export default function GuidePage() {
             </p>
             <p>
               현재 총{" "}
-              <strong className="text-foreground">314건의 감축방법론</strong>이
-              등록되어 있으며, UNFCCC CDM에서 채택한 211건과 국내에서 자체 개발한
-              103건으로 구성됩니다.
+              <strong className="text-foreground">322건의 감축방법론</strong>이
+              등록되어 있으며, UNFCCC CDM에서 채택한 209건과 국내에서 자체 개발한
+              113건으로 구성됩니다.
             </p>
           </div>
         </section>
@@ -197,7 +197,7 @@ export default function GuidePage() {
           <SectionHeader
             icon={Globe}
             title="CDM 방법론 체계"
-            subtitle="UNFCCC 청정개발체제(CDM)에서 채택된 211건의 분류"
+            subtitle="UNFCCC 청정개발체제(CDM)에서 채택된 209건의 분류"
           />
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {[

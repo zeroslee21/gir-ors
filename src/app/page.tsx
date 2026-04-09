@@ -79,8 +79,8 @@ export default function HomePage() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground sm:text-lg">
             온실가스종합정보센터(GIR) 상쇄등록부(ORS)에 등록된{" "}
-            <strong className="text-foreground">314건의 감축방법론</strong>을
-            검색하고 분석하세요. CDM 방법론 211건과 국내 방법론 103건을 한곳에서
+            <strong className="text-foreground">{totalCount}건의 감축방법론</strong>을
+            검색하고 분석하세요. CDM 방법론 {cdmCount}건과 국내 방법론 {domesticCount}건을 한곳에서
             확인할 수 있습니다.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
