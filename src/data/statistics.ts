@@ -13,12 +13,14 @@ export const yearlyData: YearlyData[] = [
   { year: 2022, total: 293, cdm: 211, domestic: 82 },
   { year: 2023, total: 303, cdm: 211, domestic: 92 },
   { year: 2024, total: 314, cdm: 211, domestic: 103 },
+  { year: 2025, total: 438, cdm: 211, domestic: 227 },
+  { year: 2026, total: 533, cdm: 211, domestic: 322 },
 ];
 
 export const summaryStats = {
-  totalMethodologies: 314,
+  totalMethodologies: 533,
   cdmCount: 211,
-  domesticCount: 103,
+  domesticCount: 322,
   sectorCount: 15,
   governingBodyCount: 5,
   amCount: 95,
